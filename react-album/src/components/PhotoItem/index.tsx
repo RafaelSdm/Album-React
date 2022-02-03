@@ -1,7 +1,19 @@
-export const PhotoItem = () =>{
+import {Link} from 'react-router-dom'
+import './styles.css'
+import {Photo} from '../../types/Photo'
+
+
+type Props = {
+    data: Photo;
+}
+
+
+
+export const PhotoItem = ({data}:Props) =>{
     return(
-        <div>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione laudantium architecto vel velit voluptatibus iure reiciendis, deleniti iste ab quod modi laborum ipsa! Iure amet, a esse necessitatibus perspiciatis exercitationem.
-        </div>
+        <Link to={`/photo/${data.id}`} className='photo'>
+            <img src={data.thumbnailUrl} alt={data.title} />
+        </Link>
+        
     )
 }
