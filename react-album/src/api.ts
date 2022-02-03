@@ -24,5 +24,6 @@ export const api = {
 
     getPhoto: async(id:string) =>{
         const req = await request(`/photos/${id}`);
+        return req.data
     }
 }
