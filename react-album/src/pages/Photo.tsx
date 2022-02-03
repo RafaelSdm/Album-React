@@ -38,7 +38,7 @@ export const Photo = () =>{
     }
     return(
         <div>
-           {loading && "Carregando"}
+           {loading && "Carregando..."}
 
            {photoInfo &&
             <>

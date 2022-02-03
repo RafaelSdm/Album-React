@@ -20,7 +20,7 @@ export const Album = () =>{
             loadPhotos(params.id);
             loadAlbumInfo(params.id);
         }
-    })
+    },[])
 
 
     const loadPhotos = async (id: string) =>{
